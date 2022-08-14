@@ -21,7 +21,28 @@ const Home: NextPage = () => {
           Checkout
         </div>
       </div>
-      <div className="bg-white p-6 rounded-2xl shadow-md"></div>
+      <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+        <div className="bg-blue-500 p-6 pb-14">
+          <span className="text-white text-2xl">Profile</span>
+        </div>
+        <div className="rounded-3xl p-6 bg-white relative -top-4">
+          <div className="flex justify-between items-end relative -top-16">
+            <div className="flex flex-col items-center">
+              <span className="text-gray-500 text-sm">Orders</span>
+              <span className="font-bold">450</span>
+            </div>
+            <div className="h-24 w-24 bg-red-300 rounded-full"></div>
+            <div className="flex flex-col items-center">
+              <span className="text-gray-500 text-sm">Spend</span>
+              <span className="font-bold">$450</span>
+            </div>
+          </div>
+          <div className=" flex flex-col items-center -mt-10 -mb-5">
+            <span className="text-2xl font-medium">Tony Molloy</span>
+            <span className="text-sm text-gray-500">New York, USA</span>
+          </div>
+        </div>
+      </div>
       <div className="bg-white p-6 rounded-2xl shadow-md"></div>
       <div className="bg-white p-6 rounded-2xl shadow-md"></div>
     </div>
