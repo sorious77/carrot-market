@@ -5,14 +5,14 @@ const Home: NextPage = () => {
     <div className="bg-slate-200 py-6 px-5 flex flex-col space-y-5 min-h-screen">
       <div className="bg-white p-10 rounded-2xl shadow-md">
         <span className="text-2xl font-semibold">Select Item</span>
-        <div className="flex justify-between my-2">
-          <span className="text-gray-500">Grey Chair</span>
-          <span className="font-bold">$170</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-500">Tooly Table</span>
-          <span className="font-bold">$800</span>
-        </div>
+        <ul>
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div className="flex justify-between my-2" key={i}>
+              <span className="text-gray-500">Grey Chair</span>
+              <span className="font-bold">$170</span>
+            </div>
+          ))}
+        </ul>
         <div className="flex justify-between my-2 pt-2 border-t-2 border-dashed">
           <span>Total</span>
           <span className="font-bold">$970</span>
@@ -57,9 +57,11 @@ const Home: NextPage = () => {
           <span className="text-xs text-gray-500">Chair</span>
           <div className="mt-3 mb-5 flex justify-between items-center">
             <div className="space-x-2">
-              <button className="w-5 h-5 rounded-full bg-yellow-500 focus:ring-2 ring-offset-2 ring-yellow-500 transition"></button>
-              <button className="w-5 h-5 rounded-full bg-indigo-500 focus:ring-2 ring-offset-2 ring-indigo-500 transition"></button>
-              <button className="w-5 h-5 rounded-full bg-teal-500 focus:ring-2 ring-offset-2 ring-teal-500 transition"></button>
+              {["yellow", "indigo", "teal"].map((color) => (
+                <button
+                  className={`w-5 h-5 rounded-full bg-${color}-500 focus:ring-2 ring-offset-2 ring-${color}-500 transition`}
+                />
+              ))}
             </div>
             <div className="flex items-center text-2xl space-x-2">
               <button className="bg-blue-100 aspect-square w-10 rounded-lg font-medium text-gray-600 flex justify-center items-center">
