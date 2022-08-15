@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-slate-200 py-6 px-5 flex flex-col space-y-5">
+    <div className="bg-slate-200 py-6 px-5 flex flex-col space-y-5 min-h-screen">
       <div className="bg-white p-10 rounded-2xl shadow-md">
         <span className="text-2xl font-semibold">Select Item</span>
         <div className="flex justify-between my-2">
@@ -43,8 +43,42 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white p-6 rounded-2xl shadow-md"></div>
-      <div className="bg-white p-6 rounded-2xl shadow-md"></div>
+      <div className="bg-white p-6 rounded-2xl shadow-md">
+        <div className="flex justify-between mb-3">
+          <span>⬅️</span>
+          <div className="space-x-3">
+            <span>🌟 4.9</span>
+            <span className="shadow-xl p-2 rounded-md">💖</span>
+          </div>
+        </div>
+        <div className="bg-zinc-400 h-72 mb-5" />
+        <div className="flex flex-col">
+          <span className="font-medium text-lg">Swoon Lounge</span>
+          <span className="text-xs text-gray-500">Chair</span>
+          <div className="mt-3 mb-5 flex justify-between items-center">
+            <div className="">
+              <input type="radio" />
+              <input type="radio" />
+              <input type="radio" />
+            </div>
+            <div className="flex items-center text-2xl space-x-2">
+              <button className="bg-blue-100 aspect-square w-10 rounded-lg font-medium text-gray-600 flex justify-center items-center">
+                -
+              </button>
+              <span>1</span>
+              <button className="bg-blue-100 aspect-square w-10 rounded-lg font-medium text-gray-600 flex justify-center items-center">
+                +
+              </button>
+            </div>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-2xl font-medium">$450</span>
+            <button className="bg-blue-500 px-10 py-3 rounded-lg text-sm text-white">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
