@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-slate-200 py-6 px-5 flex flex-col space-y-5 min-h-screen">
-      <div className="bg-white p-10 rounded-2xl shadow-md sm:bg-red-300 md:bg-teal-300 lg:bg-yellow-300 xl:bg-indigo-300 2xl:bg-pink-300">
+    <div className="bg-slate-200 py-6 px-5 space-y-5 min-h-screen grid gap-10 lg:grid-cols-2 xl:grid-cols-3 xl:place-content-center">
+      <div className="bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between">
         <span className="text-2xl font-semibold">Select Item</span>
         <ul>
           {[1, 2, 3, 4, 5].map((i) => (
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         </button>
       </div>
       <div className="bg-white rounded-2xl shadow-md overflow-hidden group">
-        <div className="bg-blue-500 p-6 pb-14">
+        <div className="portrait:bg-blue-500 landscape:bg-indigo-300 p-6 pb-14 xl:pb-40">
           <span className="text-white text-2xl">Profile</span>
         </div>
         <div className="rounded-3xl p-6 bg-white relative -top-4">
@@ -37,13 +37,13 @@ const Home: NextPage = () => {
               <span className="font-bold">$450</span>
             </div>
           </div>
-          <div className=" flex flex-col items-center -mt-10 -mb-5">
+          <div className="flex flex-col items-center -mt-10 -mb-5">
             <span className="text-2xl font-medium">Tony Molloy</span>
             <span className="text-sm text-gray-500">New York, USA</span>
           </div>
         </div>
       </div>
-      <div className="bg-white p-6 rounded-2xl shadow-md">
+      <div className="bg-white p-6 rounded-2xl shadow-md lg:col-span-2 xl:col-span-1">
         <div className="flex justify-between mb-3">
           <span>⬅️</span>
           <div className="space-x-3">
@@ -51,14 +51,15 @@ const Home: NextPage = () => {
             <span className="shadow-xl p-2 rounded-md">💖</span>
           </div>
         </div>
-        <div className="bg-zinc-400 h-72 mb-5" />
+        <div className="bg-zinc-400 h-72 mb-5 rounded" />
         <div className="flex flex-col">
           <span className="font-medium text-lg">Swoon Lounge</span>
           <span className="text-xs text-gray-500">Chair</span>
           <div className="mt-3 mb-5 flex justify-between items-center">
             <div className="space-x-2">
-              {["yellow", "indigo", "teal"].map((color) => (
+              {["yellow", "indigo", "teal"].map((color, idx) => (
                 <button
+                  key={idx}
                   className={`w-5 h-5 rounded-full bg-${color}-500 focus:ring-2 ring-offset-2 ring-${color}-500 transition`}
                 />
               ))}
