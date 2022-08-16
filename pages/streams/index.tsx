@@ -9,7 +9,7 @@ const Live: NextPage = () => {
           <h3 className="text-gray-700 text-lg mt-2">Let&apos;s try potatos</h3>
         </div>
       ))}
-      <button className="fixed hover:bg-orange-500 transition-colors cursor-pointer  bottom-24 right-5 shadow-xl bg-orange-400 rounded-full p-4 border-transparent text-white">
+      <button className="fixed hover:bg-orange-500 transition-colors cursor-pointer  bottom-16 right-5 shadow-xl bg-orange-400 rounded-full p-4 border-transparent text-white">
         <svg
           className="w-6 h-6"
           fill="none"
