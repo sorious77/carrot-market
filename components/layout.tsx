@@ -21,14 +21,9 @@ export default function Layout({
 
   return (
     <div>
-      <div
-        className={cls(
-          "bg-white w-full text-2xl font-medium py-3 fixed text-gray-800 border-b top-0 flex items-center max-w-lg px-3",
-          !canGoBack ? "justify-center" : ""
-        )}
-      >
+      <div className="bg-white w-full h-12 max-w-xl justify-center text-lg px-10 font-medium fixed text-gray-800 border-b top-0 flex items-center">
         {canGoBack && (
-          <span onClick={onClick} className="cursor-pointer">
+          <span onClick={onClick} className="cursor-pointer absolute left-4">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -45,11 +40,13 @@ export default function Layout({
             </svg>
           </span>
         )}
-        {title && <span>{title}</span>}
+        {title && (
+          <span className={cls(canGoBack ? "mx-auto" : "")}>{title}</span>
+        )}
       </div>
       <div className={cls("pt-16", hasTabBar ? "pb-24" : "")}>{children}</div>
       {hasTabBar && (
-        <nav className="bg-white w-full font-medium py-5 fixed text-orange-500 border-t bottom-0 grid grid-cols-5 max-w-lg text-sm">
+        <nav className="bg-white w-full font-medium py-3 fixed text-orange-500 border-t bottom-0 grid grid-cols-5 max-w-lg text-sm">
           <Link href="/">
             <a className="flex flex-col items-center space-y-2">
               <svg

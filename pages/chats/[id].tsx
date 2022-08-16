@@ -1,100 +1,14 @@
 import type { NextPage } from "next";
 import Layout from "../../components/layout";
+import Message from "../../components/messege";
 
 const ChatDetail: NextPage = () => {
   return (
-    <Layout canGoBack>
+    <Layout canGoBack title="Steve">
       <div className="p-3 space-y-4 mb-16">
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            Hi how much are you selling them for?
-          </div>
-        </div>
-        <div className="flex flex-row-reverse">
-          <div className="bg-gray-200 w-8 h-8 rounded-full ml-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            I want ￦20,000
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            미쳤어
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            Hi how much are you selling them for?
-          </div>
-        </div>
-        <div className="flex flex-row-reverse">
-          <div className="bg-gray-200 w-8 h-8 rounded-full ml-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            I want ￦20,000
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            미쳤어
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            Hi how much are you selling them for?
-          </div>
-        </div>
-        <div className="flex flex-row-reverse">
-          <div className="bg-gray-200 w-8 h-8 rounded-full ml-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            I want ￦20,000
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            미쳤어
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            Hi how much are you selling them for?
-          </div>
-        </div>
-        <div className="flex flex-row-reverse">
-          <div className="bg-gray-200 w-8 h-8 rounded-full ml-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            I want ￦20,000
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            미쳤어
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            Hi how much are you selling them for?
-          </div>
-        </div>
-        <div className="flex flex-row-reverse">
-          <div className="bg-gray-200 w-8 h-8 rounded-full ml-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            I want ￦20,000
-          </div>
-        </div>
-        <div className="flex">
-          <div className="bg-gray-200 w-8 h-8 rounded-full mr-2" />
-          <div className="border-[1.5px] w-1/2 border-gray-300 rounded-lg pl-3 pr-5 py-2 shadow">
-            미쳤어
-          </div>
-        </div>
+        <Message message="Hi how much are you selling them for?" />
+        <Message message="I want ₩20,000" reversed />
+        <Message message="미쳤어" />
         <div className="fixed w-full mx-auto max-w-md bottom-2 inset-x-0">
           <div className="flex items-center relative">
             <input
