@@ -3,11 +3,13 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"] // foreign Key 제약 조건 설정
 }
 
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  referentialIntegrity = "prisma" // FK 제약 조건 설정
 }
 
 model User {
