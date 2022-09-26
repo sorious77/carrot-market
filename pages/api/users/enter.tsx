@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import withHandler from "../../../libs/server/windHandler";
+import withHandler from "@libs/server/windHandler";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.json({ ok: true });
