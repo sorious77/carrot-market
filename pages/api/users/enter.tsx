@@ -1,6 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import withHandler, { ResponseType } from "@libs/server/withHandler";
 import client from "@libs/server/client";
+import twilio from "twilio";
+
+const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 
 async function handler(
   req: NextApiRequest,
@@ -32,7 +35,14 @@ async function handler(
     },
   });
 
-  console.log(token);
+  if (phone) {
+    await twilioClient.messages.create({
+      messagingServiceSid: process.env.TWILIO_MSID,
+      to: process.env.MY_PHONE!,
+      body: `Your Login token is ${payload}`,
+    });
+  }
+
   return res.json({ ok: true });
 }
 
